@@ -22,9 +22,9 @@ function movePipes() {
 
     let pipeSpeed = 1.2;
     pipes.forEach(pipe => {
-        
 
-        console.log("asdad: "+document.getElementById('flyBtn').style.left);
+
+        console.log("asdad: " + document.getElementById('flyBtn').style.left);
 
         const pipeLeft = parseInt(pipe.style.left);
         pipe.style.left = (pipeLeft - pipeSpeed) + "px";
@@ -62,8 +62,16 @@ document.getElementById('game-container').addEventListener('click', function () 
     // }
 });
 
-
+var sound = document.getElementById("crashSound");
+var lastClickedTime = 0;
+var delay = 500;
 document.addEventListener('keydown', function (event) {
+    // var currentTime = new Date().getTime();
+    // if (currentTime - lastClickedTime < delay)
+    //     sound.pause();
+    // sound.currentTime = 0;
+    // sound.play();
+    // lastClickedTime = currentTime;
     if (event.key === 'ArrowUp') {
         document.getElementById('airPlane').style.transform = "rotate(-45deg)";
         let bottom = parseInt(document.getElementById('flyBtn').style.bottom);
@@ -73,6 +81,7 @@ document.addEventListener('keydown', function (event) {
     }
     if (event.key === "ArrowRight")
         document.getElementById('airPlane').style.transform = "rotate(360deg)";
+
     if (event.key === "ArrowLeft")
         document.getElementById('airPlane').style.transform = "rotate(-360deg)";
 
