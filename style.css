@@ -4,17 +4,16 @@ body {
     box-sizing: border-box;
     padding: 50px;
     overflow: hidden;
-    /* Oyunun sınırları içinde kalmasını sağlar */
 }
 
 #game-container {
     position: relative;
     display: flex;
-    align-items: center;
+    align-items: end;
     justify-content: center;
     width: 100%;
-    height: 720px;
-    background-color: black;
+    height: 650px;
+    background-color: lightgray;
     overflow: hidden;
 
 }
@@ -22,29 +21,25 @@ body {
 .pipe {
     position: absolute;
     width: 60px;
-    /* Engellerin genişliği */
-    height: 300px;
-    /* Engellerin yüksekliği */
-    background-color: RED;
-    bottom: 0;
+    background-color: black;
 }
 
 #flyBtn {
     position: absolute;
     left: 300px;
     bottom: 0;
-    transition: bottom 0.5s ease;
-    -webkit-transition: bottom 0.5s ease;
-    -moz-transition: bottom 0.5s ease;
-    -ms-transition: bottom 0.5s ease;
-    -o-transition: bottom 0.5s ease;
-    bottom: 200px;
-
+    transition: bottom 0.8s ease;
+    -webkit-transition: bottom 0.8s ease;
+    -moz-transition: bottom 0.8s ease;
+    -ms-transition: bottom 0.8s ease;
+    -o-transition: bottom 0.8s ease;
+    bottom: 500px;
 }
 
 #flyBtn i {
     font-size: 50px;
-    color: white;
+    color: black;
+    transition: transform 0.5s ease;
 }
 
 #flyBtn:hover {
